@@ -1,0 +1,552 @@
+{
+  "positions": {
+    "header_text": [
+      1190,
+      296
+    ],
+    "personality": [
+      184,
+      1361
+    ],
+    "spirituality": [
+      1190,
+      637
+    ],
+    "money": [
+      2196,
+      1361
+    ],
+    "relationship": [
+      1884,
+      2654
+    ],
+    "health": [
+      496,
+      2654
+    ],
+    "mission": [
+      1054,
+      1753
+    ],
+    "mission_error": [
+      1190,
+      1753
+    ],
+    "mission_full": [
+      1326,
+      1753
+    ],
+    "err_personality": [
+      896,
+      1341
+    ],
+    "err_spirituality": [
+      1484,
+      1341
+    ],
+    "err_money": [
+      1679,
+      1899
+    ],
+    "err_relationship": [
+      1190,
+      2251
+    ],
+    "err_health": [
+      697,
+      1899
+    ],
+    "foot_personality": [
+      781,
+      2993
+    ],
+    "foot_spirituality": [
+      985,
+      2993
+    ],
+    "foot_money": [
+      1190,
+      2993
+    ],
+    "foot_relationship": [
+      1395,
+      2993
+    ],
+    "foot_health": [
+      1599,
+      2993
+    ],
+    "personality_inverted_vertex": [
+      927,
+      1684
+    ],
+    "personality_inverted_right_vertex": [
+      541,
+      1341
+    ],
+    "personality_inverted_left_vertex": [
+      413,
+      1684
+    ],
+    "spirituality_inverted_vertex": [
+      1190,
+      1472
+    ],
+    "spirituality_inverted_right_vertex": [
+      1378,
+      1009
+    ],
+    "spirituality_inverted_left_vertex": [
+      1002,
+      1009
+    ],
+    "money_inverted_vertex": [
+      1454,
+      1684
+    ],
+    "money_inverted_right_vertex": [
+      1968,
+      1684
+    ],
+    "money_inverted_left_vertex": [
+      1840,
+      1341
+    ],
+    "relationship_inverted_vertex": [
+      1346,
+      1954
+    ],
+    "relationship_inverted_right_vertex": [
+      1454,
+      2430
+    ],
+    "relationship_inverted_left_vertex": [
+      1780,
+      2238
+    ],
+    "health_inverted_vertex": [
+      1034,
+      1954
+    ],
+    "health_inverted_right_vertex": [
+      601,
+      2238
+    ],
+    "health_inverted_left_vertex": [
+      927,
+      2430
+    ]
+  },
+  "fonts": {
+    "header": {
+      "name": "bebas_regular",
+      "size": 320
+    },
+    "fullstar_main": {
+      "name": "bebas_regular",
+      "size": 300
+    },
+    "errors": {
+      "name": "bebas_regular",
+      "size": 250
+    },
+    "mission": {
+      "name": "bebas_regular",
+      "size": 250
+    },
+    "triangles_text": {
+      "name": "bebas_regular",
+      "size": 200
+    },
+    "footer_text": {
+      "name": "bebas_regular",
+      "size": 320
+    }
+  },
+  "colors": {
+    "header_text": "#E4E8F3",
+    "main_text": "#E6DFD2",
+    "fullstar_main": "#E7CFFF",
+    "errors": "#D9F9FF",
+    "fullstar_errors": "#E4E8F3",
+    "mission": "#FFFAE4",
+    "triangles_text": "#BDB2FF",
+    "footer_text": "#E4E8F3"
+  },
+  "elements": {
+    "header_text": {
+      "font": {
+        "$ref": "fonts.header"
+      },
+      "color": {
+        "$ref": "colors.header_text"
+      },
+      "position": {
+        "$ref": "positions.header_text"
+      }
+    },
+    "personality": {
+      "font": {
+        "$ref": "fonts.fullstar_main"
+      },
+      "color": {
+        "$ref": "colors.fullstar_main"
+      },
+      "position": {
+        "$ref": "positions.personality"
+      }
+    },
+    "spirituality": {
+      "font": {
+        "$ref": "fonts.fullstar_main"
+      },
+      "color": {
+        "$ref": "colors.fullstar_main"
+      },
+      "position": {
+        "$ref": "positions.spirituality"
+      }
+    },
+    "money": {
+      "font": {
+        "$ref": "fonts.fullstar_main"
+      },
+      "color": {
+        "$ref": "colors.fullstar_main"
+      },
+      "position": {
+        "$ref": "positions.money"
+      }
+    },
+    "relationship": {
+      "font": {
+        "$ref": "fonts.fullstar_main"
+      },
+      "color": {
+        "$ref": "colors.fullstar_main"
+      },
+      "position": {
+        "$ref": "positions.relationship"
+      }
+    },
+    "health": {
+      "font": {
+        "$ref": "fonts.fullstar_main"
+      },
+      "color": {
+        "$ref": "colors.fullstar_main"
+      },
+      "position": {
+        "$ref": "positions.health"
+      }
+    },
+    "mission": {
+      "font": {
+        "$ref": "fonts.mission"
+      },
+      "color": {
+        "$ref": "colors.mission"
+      },
+      "position": {
+        "$ref": "positions.mission"
+      }
+    },
+    "mission_error": {
+      "font": {
+        "$ref": "fonts.mission"
+      },
+      "color": {
+        "$ref": "colors.mission"
+      },
+      "position": {
+        "$ref": "positions.mission_error"
+      }
+    },
+    "mission_full": {
+      "font": {
+        "$ref": "fonts.mission"
+      },
+      "color": {
+        "$ref": "colors.mission"
+      },
+      "position": {
+        "$ref": "positions.mission_full"
+      }
+    },
+    "err_personality": {
+      "font": {
+        "$ref": "fonts.errors"
+      },
+      "color": {
+        "$ref": "colors.fullstar_errors"
+      },
+      "position": {
+        "$ref": "positions.err_personality"
+      }
+    },
+    "err_spirituality": {
+      "font": {
+        "$ref": "fonts.errors"
+      },
+      "color": {
+        "$ref": "colors.fullstar_errors"
+      },
+      "position": {
+        "$ref": "positions.err_spirituality"
+      }
+    },
+    "err_money": {
+      "font": {
+        "$ref": "fonts.errors"
+      },
+      "color": {
+        "$ref": "colors.fullstar_errors"
+      },
+      "position": {
+        "$ref": "positions.err_money"
+      }
+    },
+    "err_relationship": {
+      "font": {
+        "$ref": "fonts.errors"
+      },
+      "color": {
+        "$ref": "colors.fullstar_errors"
+      },
+      "position": {
+        "$ref": "positions.err_relationship"
+      }
+    },
+    "err_health": {
+      "font": {
+        "$ref": "fonts.errors"
+      },
+      "color": {
+        "$ref": "colors.fullstar_errors"
+      },
+      "position": {
+        "$ref": "positions.err_health"
+      }
+    },
+    "foot_personality": {
+      "font": {
+        "$ref": "fonts.footer_text"
+      },
+      "color": {
+        "$ref": "colors.footer_text"
+      },
+      "position": {
+        "$ref": "positions.foot_personality"
+      }
+    },
+    "foot_spirituality": {
+      "font": {
+        "$ref": "fonts.footer_text"
+      },
+      "color": {
+        "$ref": "colors.footer_text"
+      },
+      "position": {
+        "$ref": "positions.foot_spirituality"
+      }
+    },
+    "foot_money": {
+      "font": {
+        "$ref": "fonts.footer_text"
+      },
+      "color": {
+        "$ref": "colors.footer_text"
+      },
+      "position": {
+        "$ref": "positions.foot_money"
+      }
+    },
+    "foot_relationship": {
+      "font": {
+        "$ref": "fonts.footer_text"
+      },
+      "color": {
+        "$ref": "colors.footer_text"
+      },
+      "position": {
+        "$ref": "positions.foot_relationship"
+      }
+    },
+    "foot_health": {
+      "font": {
+        "$ref": "fonts.footer_text"
+      },
+      "color": {
+        "$ref": "colors.footer_text"
+      },
+      "position": {
+        "$ref": "positions.foot_health"
+      }
+    },
+    "personality_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_vertex"
+      }
+    },
+    "personality_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_left_vertex"
+      }
+    },
+    "personality_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_right_vertex"
+      }
+    },
+    "spirituality_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_vertex"
+      }
+    },
+    "spirituality_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_left_vertex"
+      }
+    },
+    "spirituality_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_right_vertex"
+      }
+    },
+    "money_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_vertex"
+      }
+    },
+    "money_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_left_vertex"
+      }
+    },
+    "money_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_right_vertex"
+      }
+    },
+    "relationship_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_vertex"
+      }
+    },
+    "relationship_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_left_vertex"
+      }
+    },
+    "relationship_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_right_vertex"
+      }
+    },
+    "health_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_vertex"
+      }
+    },
+    "health_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_left_vertex"
+      }
+    },
+    "health_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_text"
+      },
+      "color": {
+        "$ref": "colors.triangles_text"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_right_vertex"
+      }
+    }
+  }
+}

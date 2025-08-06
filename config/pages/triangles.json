@@ -1,0 +1,145 @@
+{
+  "positions": {
+    "vertex": [
+      1190,
+      634
+    ],
+    "left_vertex": [
+      244,
+      2432
+    ],
+    "right_vertex": [
+      2153,
+      2432
+    ],
+    "inverted_vertex": [
+      1190,
+      2422
+    ],
+    "inverted_left_vertex": [
+      672,
+      1428
+    ],
+    "inverted_right_vertex": [
+      1707,
+      1428
+    ],
+    "left_middle_vertex": [
+      991,
+      1428
+    ],
+    "right_middle_vertex": [
+      1388,
+      1428
+    ]
+  },
+  "fonts": {
+    "vertex": {
+      "name": "bebas_regular",
+      "size": 380
+    },
+    "inverted": {
+      "name": "bebas_regular",
+      "size": 330
+    },
+    "middle": {
+      "name": "bebas_regular",
+      "size": 280
+    }
+  },
+  "colors": {
+    "vertex": "#E7CFFF",
+    "inverted": "#FFFAE4",
+    "middle": "#D5CBFF"
+  },
+  "elements": {
+    "vertex": {
+      "font": {
+        "$ref": "fonts.vertex"
+      },
+      "color": {
+        "$ref": "colors.vertex"
+      },
+      "position": {
+        "$ref": "positions.vertex"
+      }
+    },
+    "left_vertex": {
+      "font": {
+        "$ref": "fonts.vertex"
+      },
+      "color": {
+        "$ref": "colors.vertex"
+      },
+      "position": {
+        "$ref": "positions.left_vertex"
+      }
+    },
+    "right_vertex": {
+      "font": {
+        "$ref": "fonts.vertex"
+      },
+      "color": {
+        "$ref": "colors.vertex"
+      },
+      "position": {
+        "$ref": "positions.right_vertex"
+      }
+    },
+    "inverted_vertex": {
+      "font": {
+        "$ref": "fonts.inverted"
+      },
+      "color": {
+        "$ref": "colors.inverted"
+      },
+      "position": {
+        "$ref": "positions.inverted_vertex"
+      }
+    },
+    "inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.inverted"
+      },
+      "color": {
+        "$ref": "colors.inverted"
+      },
+      "position": {
+        "$ref": "positions.inverted_left_vertex"
+      }
+    },
+    "inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.inverted"
+      },
+      "color": {
+        "$ref": "colors.inverted"
+      },
+      "position": {
+        "$ref": "positions.inverted_right_vertex"
+      }
+    },
+    "left_middle_vertex": {
+      "font": {
+        "$ref": "fonts.middle"
+      },
+      "color": {
+        "$ref": "colors.middle"
+      },
+      "position": {
+        "$ref": "positions.left_middle_vertex"
+      }
+    },
+    "right_middle_vertex": {
+      "font": {
+        "$ref": "fonts.middle"
+      },
+      "color": {
+        "$ref": "colors.middle"
+      },
+      "position": {
+        "$ref": "positions.right_middle_vertex"
+      }
+    }
+  }
+}

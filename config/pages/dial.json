@@ -1,0 +1,30 @@
+{
+  "fonts": {
+    "main_dial": {
+      "name": "bebas_regular",
+      "size": 200
+    },
+    "inner_dial": {
+      "name": "bebas_regular",
+      "size": 180
+    }
+  },
+  "colors": {
+    "main_dial": "#00DDFF",
+    "inner_dial": "#AC05FA"
+  },
+  "geometry": {
+    "center": [
+      1190,
+      1744
+    ],
+    "start_angle": 198,
+    "angle_step": 4.5,
+    "main_dial": {
+      "radius": 965
+    },
+    "inner_dial": {
+      "radius": 965
+    }
+  }
+}

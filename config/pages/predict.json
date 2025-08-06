@@ -1,0 +1,400 @@
+{
+  "positions": {
+    "personality": [
+      483,
+      1486
+    ],
+    "spirituality": [
+      1190,
+      959
+    ],
+    "money": [
+      1887,
+      1486
+    ],
+    "relationship": [
+      1646,
+      2447
+    ],
+    "health": [
+      734,
+      2447
+    ],
+    "err_personality": [
+      980,
+      1486
+    ],
+    "err_spirituality": [
+      1390,
+      1486
+    ],
+    "err_money": [
+      1535,
+      1900
+    ],
+    "err_relationship": [
+      1190,
+      2140
+    ],
+    "err_health": [
+      825,
+      1900
+    ],
+    "personality_inverted_vertex": [
+      995,
+      1730
+    ],
+    "personality_inverted_right_vertex": [
+      733,
+      1486
+    ],
+    "personality_inverted_left_vertex": [
+      626,
+      1730
+    ],
+    "spirituality_inverted_vertex": [
+      1190,
+      1573
+    ],
+    "spirituality_inverted_right_vertex": [
+      1313,
+      1230
+    ],
+    "spirituality_inverted_left_vertex": [
+      1067,
+      1230
+    ],
+    "money_inverted_vertex": [
+      1375,
+      1730
+    ],
+    "money_inverted_right_vertex": [
+      1754,
+      1730
+    ],
+    "money_inverted_left_vertex": [
+      1647,
+      1486
+    ],
+    "relationship_inverted_vertex": [
+      1323,
+      1913
+    ],
+    "relationship_inverted_right_vertex": [
+      1408,
+      2282
+    ],
+    "relationship_inverted_left_vertex": [
+      1599,
+      2122
+    ],
+    "health_inverted_vertex": [
+      1057,
+      1913
+    ],
+    "health_inverted_right_vertex": [
+      771,
+      2122
+    ],
+    "health_inverted_left_vertex": [
+      962,
+      2282
+    ]
+  },
+  "fonts": {
+    "main_arcanes": {
+      "name": "bebas_regular",
+      "size": 200
+    },
+    "errors_arcanes": {
+      "name": "bebas_regular",
+      "size": 200
+    },
+    "triangles_arcanes": {
+      "name": "bebas_regular",
+      "size": 150
+    }
+  },
+  "colors": {
+    "main_arcanes": "#B0F4FF",
+    "errors_arcanes": "#B0F4FF",
+    "triangles_arcanes": "#B0F4FF"
+  },
+  "elements": {
+    "personality": {
+      "font": {
+        "$ref": "fonts.main_arcanes"
+      },
+      "color": {
+        "$ref": "colors.main_arcanes"
+      },
+      "position": {
+        "$ref": "positions.personality"
+      }
+    },
+    "spirituality": {
+      "font": {
+        "$ref": "fonts.main_arcanes"
+      },
+      "color": {
+        "$ref": "colors.main_arcanes"
+      },
+      "position": {
+        "$ref": "positions.spirituality"
+      }
+    },
+    "money": {
+      "font": {
+        "$ref": "fonts.main_arcanes"
+      },
+      "color": {
+        "$ref": "colors.main_arcanes"
+      },
+      "position": {
+        "$ref": "positions.money"
+      }
+    },
+    "relationship": {
+      "font": {
+        "$ref": "fonts.main_arcanes"
+      },
+      "color": {
+        "$ref": "colors.main_arcanes"
+      },
+      "position": {
+        "$ref": "positions.relationship"
+      }
+    },
+    "health": {
+      "font": {
+        "$ref": "fonts.main_arcanes"
+      },
+      "color": {
+        "$ref": "colors.main_arcanes"
+      },
+      "position": {
+        "$ref": "positions.health"
+      }
+    },
+    "err_personality": {
+      "font": {
+        "$ref": "fonts.errors_arcanes"
+      },
+      "color": {
+        "$ref": "colors.errors_arcanes"
+      },
+      "position": {
+        "$ref": "positions.err_personality"
+      }
+    },
+    "err_spirituality": {
+      "font": {
+        "$ref": "fonts.errors_arcanes"
+      },
+      "color": {
+        "$ref": "colors.errors_arcanes"
+      },
+      "position": {
+        "$ref": "positions.err_spirituality"
+      }
+    },
+    "err_money": {
+      "font": {
+        "$ref": "fonts.errors_arcanes"
+      },
+      "color": {
+        "$ref": "colors.errors_arcanes"
+      },
+      "position": {
+        "$ref": "positions.err_money"
+      }
+    },
+    "err_relationship": {
+      "font": {
+        "$ref": "fonts.errors_arcanes"
+      },
+      "color": {
+        "$ref": "colors.errors_arcanes"
+      },
+      "position": {
+        "$ref": "positions.err_relationship"
+      }
+    },
+    "err_health": {
+      "font": {
+        "$ref": "fonts.errors_arcanes"
+      },
+      "color": {
+        "$ref": "colors.errors_arcanes"
+      },
+      "position": {
+        "$ref": "positions.err_health"
+      }
+    },
+    "personality_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_vertex"
+      }
+    },
+    "personality_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_left_vertex"
+      }
+    },
+    "personality_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.personality_inverted_right_vertex"
+      }
+    },
+    "spirituality_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_vertex"
+      }
+    },
+    "spirituality_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_left_vertex"
+      }
+    },
+    "spirituality_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.spirituality_inverted_right_vertex"
+      }
+    },
+    "money_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_vertex"
+      }
+    },
+    "money_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_left_vertex"
+      }
+    },
+    "money_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.money_inverted_right_vertex"
+      }
+    },
+    "relationship_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_vertex"
+      }
+    },
+    "relationship_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_left_vertex"
+      }
+    },
+    "relationship_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.relationship_inverted_right_vertex"
+      }
+    },
+    "health_inverted_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_vertex"
+      }
+    },
+    "health_inverted_left_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_left_vertex"
+      }
+    },
+    "health_inverted_right_vertex": {
+      "font": {
+        "$ref": "fonts.triangles_arcanes"
+      },
+      "color": {
+        "$ref": "colors.triangles_arcanes"
+      },
+      "position": {
+        "$ref": "positions.health_inverted_right_vertex"
+      }
+    }
+  }
+}

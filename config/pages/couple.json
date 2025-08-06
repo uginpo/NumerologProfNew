@@ -1,0 +1,105 @@
+{
+  "positions": {
+    "header_text": [
+      1190,
+      235
+    ],
+    "personality": [
+      335,
+      1028
+    ],
+    "spirituality": [
+      1190,
+      405
+    ],
+    "money": [
+      2033,
+      1028
+    ],
+    "relationship": [
+      1716,
+      2205
+    ],
+    "health": [
+      664,
+      2205
+    ]
+  },
+  "fonts": {
+    "couple": {
+      "name": "bebas_regular",
+      "size": 320
+    }
+  },
+  "colors": {
+    "couple": "#E7CFFF"
+  },
+  "elements": {
+    "header_text": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.header_text"
+      }
+    },
+    "personality": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.personality"
+      }
+    },
+    "spirituality": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.spirituality"
+      }
+    },
+    "money": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.money"
+      }
+    },
+    "relationship": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.relationship"
+      }
+    },
+    "health": {
+      "font": {
+        "$ref": "fonts.couple"
+      },
+      "color": {
+        "$ref": "colors.couple"
+      },
+      "position": {
+        "$ref": "positions.health"
+      }
+    }
+  }
+}
