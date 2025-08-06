@@ -94,10 +94,11 @@ def collect_triangles_adult(
     return result_list
 
 
-# TODO: реализовать функцию
+# TODO: создать функцию создания страниц детских треугольников
 def collect_triangles_child(
     client_info: Client, pointers: list[PointerType] = ["personality", "money"]
 ) -> list[Path]:
+    # NOTE::будет использовано для выбора детского словаря
     is_child: bool = True
 
     mainstar = MainStar(client_info=client_info)
@@ -110,11 +111,11 @@ def collect_triangles_child(
         ).to_dict()
         triangles[pointer] = triangle
 
+    # TODO: создать функцию создания текстовых страниц детских треугольников
     logger.debug(f"triangles = {repr_data(triangles)}")
     return [Path("triangles_child_reports")]
 
 
-# TODO: реализовать функцию
 def collect_predict_report(client_info: Client) -> Path:
     inner_star = get_inner_star(client_info)
     full_dial = get_full_dial(client_info)
@@ -132,6 +133,7 @@ def collect_predict_report(client_info: Client) -> Path:
     result: Path = generate_pdf(
         output_path=predict_path, template=template_path, page_data=context
     )
+    # TODO: создать функцию создания текстовых страниц predict
     return result
 
 
@@ -157,4 +159,25 @@ def create_couple_report(scenario: Scenario) -> Path:
     result: Path = generate_pdf(
         output_path=couple_path, template=template_path, page_data=context
     )
+    return result
+
+
+def create_pythagorian_table(client_info: Client) -> Path:
+    inner_star = get_inner_star(client_info)
+    full_dial = get_full_dial(client_info)
+
+    json_path = PREDICT.get("json", Path("."))
+    config = load_config(json_path=json_path[0])
+    context_star: dict[str, dict] = build_render_context(config, inner_star)
+
+    config = load_config(json_path=json_path[1])
+    context_dial: dict[str, dict] = build_dial_context(config, full_dial)
+    context = context_star | context_dial
+
+    predict_path: Path = OUTPUT_PATH / f"{client_info.name}_predict.pdf"
+    template_path = PREDICT.get("jpg", Path("."))
+    result: Path = generate_pdf(
+        output_path=predict_path, template=template_path, page_data=context
+    )
+    # TODO: создать функцию создания текстовых страниц predict
     return result

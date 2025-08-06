@@ -10,6 +10,7 @@ from .reports_collection import (
     collect_triangles_child,
     create_couple_report,
     create_fullstar_report,
+    create_pythagorian_table,
 )
 
 
@@ -42,6 +43,10 @@ def collect_adult_report(client_info: Client) -> list[Path]:
     _has_report(report=predict_report)
     adult_report.append(predict_report)
 
+    pythagorian_report = create_pythagorian_table(client_info=client_info)
+    _has_report(report=pythagorian_report)
+    adult_report.append(pythagorian_report)
+
     logger.debug("Все отчеты на взрослого клиента созданы")
 
     return adult_report
@@ -52,10 +57,18 @@ def collect_child_report(client_info: Client) -> list[Path]:
     и возвращает список сформированных файлов отчетов.
     """
 
-    child_report = collect_triangles_child(
+    child_report = []
+
+    triangle_reports = collect_triangles_child(
         client_info=client_info, pointers=["personality", "money"]
     )
     _has_report(report=child_report)
+    child_report.append(triangle_reports)
+
+    pythagorian_report = create_pythagorian_table(client_info=client_info)
+    _has_report(report=pythagorian_report)
+    child_report.append(pythagorian_report)
+
     logger.debug("Все отчеты на ребенка созданы")
 
     return child_report

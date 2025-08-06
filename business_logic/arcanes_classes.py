@@ -282,8 +282,67 @@ class Triangle:
         }
 
 
+@dataclass(frozen=True)
+class PythagorianTable:
+    client_info: Client
+
+    @cached_property
+    def _dob_before_2000(self) -> bool:
+        return self.client_info.birthday.year < 2000
+
+    @cached_property
+    def number_1(self) -> int:
+        return (
+            self.client_info.birthday.day
+            + self.client_info.birthday.month
+            + self.client_info.birthday.year
+        )
+
+    @cached_property
+    def number_2(self) -> int:
+        if self.number_1 in [11, 22, 33]:
+            return self.number_1
+        else:
+            return digital_root(self.number_1, arcanes_number=9)
+
+    @cached_property
+    def number_3(self) -> int:
+        if self._dob_before_2000:
+            first_symbol = int(str(self.client_info.birthday.day)[0])
+            return self.number_1 - 2 * first_symbol
+        else:
+            return 19
+
+    @cached_property
+    def number_4(self) -> int:
+        if self._dob_before_2000:
+            return digital_root(self.number_3, arcanes_number=9)
+        else:
+            return self.number_1 + 19
+
+    @cached_property
+    def number_5(self) -> int:
+        if self._dob_before_2000:
+            return 0
+        else:
+            return digital_root(self.number_4, arcanes_number=9)
+
+    def to_dict(self) -> dict[str, str]:
+        all_numbers = "".join(
+            [
+                str(self.number_1),
+                str(self.number_2),
+                str(self.number_3),
+                str(self.number_4),
+                str(self.number_5),
+            ]
+        )
+
+        return {str(d): str(all_numbers.count(str(d))) for d in range(1, 10)}
+
+
 def combine_couple_star(star1: MainStar, star2: MainStar) -> dict[str, str]:
-    """Создание звезды для пары клиентов"""
+    """создание звезды для пары клиентов"""
 
     attributes = [
         "personality",
