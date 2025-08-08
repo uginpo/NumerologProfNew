@@ -337,8 +337,12 @@ class PythagorianTable:
                 str(self.number_5),
             ]
         )
+        result = OrderedDict()
+        for d in range(1, 10):
+            count_d = all_numbers.count(str(d))
+            result[str(d)] = str(d) * count_d if count_d else "—"
 
-        return {str(d): str(all_numbers.count(str(d))) for d in range(1, 10)}
+        return result
 
 
 def combine_couple_star(star1: MainStar, star2: MainStar) -> dict[str, str]:

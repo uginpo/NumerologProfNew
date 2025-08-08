@@ -154,3 +154,51 @@ def build_dial_context(
         }
 
     return context
+
+
+def build_pythagorian_context(
+    config: dict, user_data: dict[str, str], scale: float = SCALE_PX_MM
+) -> dict[str, dict]:
+    """
+    Build dial data structure for pythagorian_table
+    """
+
+    fonts = config["fonts"]
+    colors = config["colors"]
+    geometry = config["geometry"]
+    initial_point = geometry["initial_point"]
+    sidelength = geometry["square"]
+
+    colors_rgb = {
+        "pythagorian": {
+            "hex": colors["pythagorian"],
+            "rgb": hex_to_rgb(colors["pythagorian"]),
+        },
+    }
+
+    context = {}
+
+    start_x = initial_point[0] + sidelength / 2
+    start_y = initial_point[1] + sidelength / 2
+
+    # Обрабатываем все данные в порядке их следования
+    for idx, (key, value) in enumerate(user_data.items()):
+        current_x = start_x + (idx % 3) * sidelength
+        current_y = start_y + (idx // 3) * sidelength
+
+        font_settings = {
+            "name": fonts["pythagorian"]["name"],
+            "size": int(fonts["pythagorian"]["size"] * scale),
+        }
+        color_settings = colors_rgb["pythagorian"]
+        raw_position = (current_x, current_y)
+        scaled_position = scale_position(raw_position, scale)
+
+        context[key] = {
+            "text": str(value),
+            "font": font_settings,
+            "color": color_settings,
+            "position": scaled_position,
+        }
+
+    return context

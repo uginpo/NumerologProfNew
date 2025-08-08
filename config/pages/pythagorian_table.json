@@ -1,0 +1,18 @@
+{
+  "fonts": {
+    "pythagorian": {
+      "name": "bebas_regular",
+      "size": 400
+    }
+  },
+  "colors": {
+    "pythagorian": "#FFC857"
+  },
+  "geometry": {
+    "initial_point": [
+      283,
+      558
+    ],
+    "square": 600
+  }
+}

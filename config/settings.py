@@ -31,6 +31,10 @@ PREDICT = {
     "jpg": Path("templates/predict.jpg"),
 }
 
+PITHAGORIAN_TABLE = {
+    "json": Path("config/pages/pythagorian_table.json"),
+    "jpg": Path("templates/pythagorian_table.jpg"),
+}
 OUTPUT_PATH = Path("output")
 
 """

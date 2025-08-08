@@ -10,16 +10,25 @@ from business_logic.arcanes_classes import (
     MainStar,
     MissionStar,
     PointerType,
+    PythagorianTable,
     Scenario,
     Triangle,
     combine_couple_star,
     get_full_dial,
     get_inner_star,
 )
-from config.settings import COUPLE, FULLSTAR, OUTPUT_PATH, PREDICT, TRIANGLES
+from config.settings import (
+    COUPLE,
+    FULLSTAR,
+    OUTPUT_PATH,
+    PITHAGORIAN_TABLE,
+    PREDICT,
+    TRIANGLES,
+)
 from utils.pdf_creator import generate_pdf
 from utils.render_context_builder import (
     build_dial_context,
+    build_pythagorian_context,
     build_render_context,
     load_config,
 )
@@ -163,21 +172,21 @@ def create_couple_report(scenario: Scenario) -> Path:
 
 
 def create_pythagorian_table(client_info: Client) -> Path:
-    inner_star = get_inner_star(client_info)
-    full_dial = get_full_dial(client_info)
+    pythagorian_table = PythagorianTable(client_info).to_dict()
 
-    json_path = PREDICT.get("json", Path("."))
-    config = load_config(json_path=json_path[0])
-    context_star: dict[str, dict] = build_render_context(config, inner_star)
+    json_path = PITHAGORIAN_TABLE.get("json", Path("."))
+    config = load_config(json_path=json_path)
+    context: dict[str, dict] = build_pythagorian_context(
+        config, pythagorian_table)
 
-    config = load_config(json_path=json_path[1])
-    context_dial: dict[str, dict] = build_dial_context(config, full_dial)
-    context = context_star | context_dial
+    logger.debug(f"pythagorian{pythagorian_table=}")
+    logger.debug(f"pythagorian{context=}")
 
-    predict_path: Path = OUTPUT_PATH / f"{client_info.name}_predict.pdf"
-    template_path = PREDICT.get("jpg", Path("."))
+    pythagorian_path: Path = OUTPUT_PATH / \
+        f"{client_info.name}_pythagorian.pdf"
+    template_path = PITHAGORIAN_TABLE.get("jpg", Path("."))
     result: Path = generate_pdf(
-        output_path=predict_path, template=template_path, page_data=context
+        output_path=pythagorian_path, template=template_path, page_data=context
     )
     # TODO: создать функцию создания текстовых страниц predict
     return result
