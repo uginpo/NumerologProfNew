@@ -103,7 +103,6 @@ def collect_triangles_adult(
     return result_list
 
 
-# TODO: создать функцию создания страниц детских треугольников
 def collect_triangles_child(
     client_info: Client, pointers: list[PointerType] = ["personality", "money"]
 ) -> list[Path]:
@@ -113,16 +112,25 @@ def collect_triangles_child(
     mainstar = MainStar(client_info=client_info)
     errorstar = ErrorStar(star=mainstar)
 
-    triangles: dict[PointerType, dict] = {}
+    result_list = [Path, ...]
     for pointer in pointers:
         triangle: dict = Triangle(
             star=mainstar, err=errorstar, pointer=pointer
         ).to_dict()
-        triangles[pointer] = triangle
 
+        triangle_path: Path = OUTPUT_PATH / f"{client_info.name}_{pointer}.pdf"
+
+        json_path = TRIANGLES.get("json", Path("."))
+        config = load_config(json_path=json_path)
+        context: dict[str, dict] = build_render_context(config, triangle)
+        template_path: Path = TRIANGLES.get(pointer, Path("."))
+
+        result = generate_pdf(
+            triangle_path, template=template_path, page_data=context)
+
+        result_list.append(result)
     # TODO: создать функцию создания текстовых страниц детских треугольников
-    logger.debug(f"triangles = {repr_data(triangles)}")
-    return [Path("triangles_child_reports")]
+    return result_list
 
 
 def collect_predict_report(client_info: Client) -> Path:

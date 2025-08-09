@@ -62,7 +62,7 @@ def collect_child_report(client_info: Client) -> list[Path]:
     triangle_reports = collect_triangles_child(
         client_info=client_info, pointers=["personality", "money"]
     )
-    _has_report(report=child_report)
+    _has_report(report=triangle_reports)
     child_report.append(triangle_reports)
 
     pythagorian_report = create_pythagorian_table(client_info=client_info)
