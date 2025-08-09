@@ -179,7 +179,7 @@ def create_pythagorian_table(client_info: Client) -> Path:
     context: dict[str, dict] = build_pythagorian_context(
         config, pythagorian_table)
 
-    logger.debug(f"pythagorian{pythagorian_table=}")
+    logger.debug(f"{pythagorian_table=}")
     logger.debug(f"pythagorian{context=}")
 
     pythagorian_path: Path = OUTPUT_PATH / \

@@ -293,9 +293,9 @@ class PythagorianTable:
     @cached_property
     def number_1(self) -> int:
         return (
-            self.client_info.birthday.day
-            + self.client_info.birthday.month
-            + self.client_info.birthday.year
+            simple_digital_root(self.client_info.birthday.day)
+            + simple_digital_root(self.client_info.birthday.month)
+            + simple_digital_root(self.client_info.birthday.year)
         )
 
     @cached_property
@@ -337,6 +337,7 @@ class PythagorianTable:
                 str(self.number_5),
             ]
         )
+        logger.debug(f"{all_numbers=}")
         result = OrderedDict()
         for d in range(1, 10):
             count_d = all_numbers.count(str(d))
@@ -461,6 +462,11 @@ def count_dial_data(dial: dict) -> dict[str, str]:
         full_dial[middle_key] = str(middle)
         full_dial[right_key] = str(right)
     return full_dial
+
+
+def simple_digital_root(num: int) -> int:
+    """Рассчитывает числовой корень из суммы цифр входящего числа."""
+    return sum(int(d) for d in str(num))
 
 
 def digital_root(num: int, arcanes_number: int = 22) -> int:
