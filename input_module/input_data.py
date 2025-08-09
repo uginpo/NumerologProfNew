@@ -111,10 +111,10 @@ def enter_data() -> Scenario:
             return result
 
         case "22":
-            birthday = datetime.strptime("6.02.2019", "%d.%m.%Y").date()
+            birthday = datetime.strptime("16.02.2019", "%d.%m.%Y").date()
             result = Scenario(
                 scenario="child",
-                clients=[Client(name="John", birthday=birthday, gender="M")],
+                clients=[Client(name="Jeck", birthday=birthday, gender="M")],
             )
             return result
 
