@@ -2,37 +2,18 @@ from pathlib import Path
 
 from loguru import logger
 
-from business_logic.arcanes_classes import (
-    TRIANGLES_NAMES,
-    Client,
-    ErrorStar,
-    FooterStar,
-    MainStar,
-    MissionStar,
-    PointerType,
-    PythagorianTable,
-    Scenario,
-    Triangle,
-    combine_couple_star,
-    get_full_dial,
-    get_inner_star,
-)
-from config.settings import (
-    COUPLE,
-    FULLSTAR,
-    OUTPUT_PATH,
-    PITHAGORIAN_TABLE,
-    PREDICT,
-    TRIANGLES,
-)
+from business_logic.arcanes_classes import (TRIANGLES_NAMES, Client, ErrorStar,
+                                            FooterStar, MainStar, MissionStar,
+                                            PointerType, PythagorianTable,
+                                            Scenario, Triangle,
+                                            combine_couple_star, get_full_dial,
+                                            get_inner_star)
+from config.settings import (COUPLE, FULLSTAR, OUTPUT_PATH, PITHAGORIAN_TABLE,
+                             PREDICT, TRIANGLES)
 from utils.pdf_creator import generate_pdf
-from utils.render_context_builder import (
-    build_dial_context,
-    build_pythagorian_context,
-    build_render_context,
-    load_config,
-)
-from utils.transform_utils import repr_data
+from utils.render_context_builder import (build_dial_context,
+                                          build_pythagorian_context,
+                                          build_render_context, load_config)
 
 
 class DataCheckError(Exception):
@@ -90,8 +71,12 @@ def collect_triangles_adult(
 
         json_path = TRIANGLES.get("json", Path("."))
         config = load_config(json_path=json_path)
+
         context: dict[str, dict] = build_render_context(config, triangle)
-        template_path: Path = TRIANGLES.get(pointer, Path("."))
+
+        template_dict: dict = TRIANGLES.get(pointer, {})
+        template_path: Path = template_dict.get("jpg", Path("."))
+        tex_path: Path = template_dict.get("tex", Path("."))
 
         result = generate_pdf(
             triangle_path, template=template_path, page_data=context)
@@ -99,6 +84,7 @@ def collect_triangles_adult(
         result_list.append(result)
 
     # TODO: реализовать функцию создания текстовых страниц треугольников
+
     logger.debug(f"{result_list=}")
     return result_list
 

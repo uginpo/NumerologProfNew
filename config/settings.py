@@ -9,14 +9,30 @@ ERROR_FILE = Path("logs/error.log")
 FULLSTAR = {
     "json": Path("config/pages/fullstar.json"),
     "jpg": Path("templates/fullstar.jpg"),
+    "tex_templates": {"personality": Path("latex_storage/fullstar.tex")},
 }
 TRIANGLES = {
     "json": Path("config/pages/triangles.json"),
-    "personality": Path("templates/personality.jpg"),
-    "spirituality": Path("templates/spirituality.jpg"),
-    "money": Path("templates/money.jpg"),
-    "relationship": Path("templates/relationship.jpg"),
-    "health": Path("templates/health.jpg"),
+    "personality": {
+        "jpg": Path("templates/personality.jpg"),
+        "tex": Path("latex_storage/personality.tex"),
+    },
+    "spirituality": {
+        "jpg": Path("templates/spirituality.jpg"),
+        "tex": Path("latex_storage/spirituality.tex"),
+    },
+    "money": {
+        "jpg": Path("templates/money.jpg"),
+        "tex": Path("latex_storage/money.tex"),
+    },
+    "relationship": {
+        "jpg": Path("templates/relationship.jpg"),
+        "tex": Path("latex_storage/relationship.tex"),
+    },
+    "health": {
+        "jpg": Path("templates/health.jpg"),
+        "tex": Path("latex_storage/health.tex"),
+    },
 }
 COUPLE = {
     "json": Path("config/pages/couple.json"),

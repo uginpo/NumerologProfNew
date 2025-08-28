@@ -1,0 +1,83 @@
+.
+├── business_logic
+│   ├── __init__.py
+│   ├── analytic_class.py
+│   ├── arcanes_classes.py
+│   └── star_triples_data.py
+├── config
+│   ├── pages
+│   │   ├── couple.json
+│   │   ├── dial.json
+│   │   ├── fullstar.json
+│   │   ├── predict.json
+│   │   ├── pythagorian_table.json
+│   │   └── triangles.json
+│   ├── __init__.py
+│   └── settings.py
+├── data_requests
+│   ├── data_combiner.py
+│   ├── fullstar_analityc.py
+│   └── triple_request.py
+├── input_module
+│   ├── __init__.py
+│   └── input_data.py
+├── latex_storage
+│   ├── __init__.py
+│   └── personality.tex
+├── logs
+│   ├── debug.log
+│   ├── error.log
+│   └── info.log
+├── report_storage
+│   ├── fonts
+│   │   ├── BebasNeue-Regular.ttf
+│   │   ├── Roboto Mono Bold for Powerline.ttf
+│   │   ├── Roboto Mono Light for Powerline.ttf
+│   │   ├── Roboto Mono Medium for Powerline.ttf
+│   │   └── Roboto Mono for Powerline.ttf
+│   ├── font_colors_class.py
+│   ├── position_class.py
+│   └── report_classes.py
+├── src
+│   ├── __init__.py
+│   ├── full_star_old.py
+│   ├── main_reports.py
+│   └── reports_collection.py
+├── temp
+│   └── for_print.py
+├── templates
+│   ├── couple.jpg
+│   ├── fullstar.jpg
+│   ├── health.jpg
+│   ├── money.jpg
+│   ├── personality.jpg
+│   ├── predict.jpg
+│   ├── pythagorian_table.jpg
+│   ├── relationship.jpg
+│   └── spirituality.jpg
+├── tests
+│   └──  test_arcanes_classes.py
+├── utils
+│   ├── data_to_text.py
+│   ├── log_utils.py
+│   ├── pdf_creator.py
+│   ├── pdf_utility.py
+│   ├── render_context_builder.py
+│   └── transform_utils.py
+├── README.md
+├── Technical_requirement.md
+├── build_call_graph.sh
+├── call_graph.gv
+├── call_graph.png
+├── find_todo.sh
+├── main.py
+├── print_structure.sh
+├── project_structure.txt
+├── pyproject.toml
+├── pyrightconfig.json
+├── pytest.ini
+├── result.json
+├── uv.lock
+└── ~$oject_structure.txt
+
+15 directories, 66 files

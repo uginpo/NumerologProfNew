@@ -1,14 +1,17 @@
 # main.py
 
+from pathlib import Path
+
 from loguru import logger
 
 from business_logic.arcanes_classes import Scenario
 from input_module.input_data import enter_data
-from src.main_reports import (
-    collect_adult_report,
-    collect_child_report,
-    collect_couple_report,
-)
+from src.main_reports import (collect_adult_report, collect_child_report,
+                              collect_couple_report)
+
+
+class MainReportError(Exception):
+    pass
 
 
 def main() -> None:
@@ -17,16 +20,19 @@ def main() -> None:
 
     match scenario.scenario:
         case "adult":
-            report = collect_adult_report(scenario.clients[0])
+            report: Path = collect_adult_report(scenario.clients[0])
 
         case "child":
-            report = collect_child_report(scenario.clients[0])
+            report: Path = collect_child_report(scenario.clients[0])
 
         case "couple":
-            report = collect_couple_report(scenario)
+            report: Path = collect_couple_report(scenario)
 
-    logger.debug(f"{report}")
-    logger.info("Программа успешно завершила работу.")
+    if report.exists():
+        logger.info("Программа успешно завершила работу.")
+    else:
+        logger.error(f"Error when creating the report {report}")
+        raise MainReportError(f"Error when creating the report {report}")
 
 
 if __name__ == "__main__":
